@@ -16,9 +16,8 @@ while (alumno !== "") {
 
   if (condicion === true) {
     console.log("La nota final de: " + alumno + " es " + notaTotal);
-    break;
   } else {
     console.log("Error en la carga de datos");
-    break;
   }
+  alumno = String(prompt("Ingrese nombre alumno"));
 }
