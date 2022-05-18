@@ -1,10 +1,11 @@
 let alumno: string = String(prompt("Ingrese nombre alumno"));
-let notaTotal: number = 0;
 
 while (alumno !== "") {
   let nota1: number = Number(prompt("Ingrese nota practica"));
   let nota2: number = Number(prompt("Ingrese nota problemas"));
   let nota3: number = Number(prompt("Ingrese nota teorica"));
+  let notaTotal: number = Number(nota1 * 0.1 + nota2 * 0.5 + nota3 * 0.4);
+
   let condicion =
     nota1 <= 10 &&
     nota2 <= 10 &&
@@ -14,7 +15,6 @@ while (alumno !== "") {
     nota3 >= 0;
 
   if (condicion === true) {
-    notaTotal = Number(nota1 * 0.1 + nota2 * 0.5 + nota3 * 0.4);
     console.log("La nota final de: " + alumno + " es " + notaTotal);
     break;
   } else {
